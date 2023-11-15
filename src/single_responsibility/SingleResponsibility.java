@@ -1,6 +1,7 @@
 package single_responsibility;
 
 public class SingleResponsibility {
+    // DESIGN PRINCIP
     public static void main(String[] args) {
         // USE CASE:
         // vi har en ProductService som har två viktiga ansvarsområden:
@@ -24,12 +25,18 @@ class ProductService {
     public Product getProductById(Long id) {
         return null;
     }
+}
 
+class NotificationService {
     public void sendSms() {
         System.out.println("sms sent");
     }
 
-    public void sendEmail() {
+    public void sendHTMLEmail() {
+        System.out.println("email sent");
+    }
+
+    public void sendTextEmail() {
         System.out.println("email sent");
     }
 }

@@ -9,11 +9,11 @@ public class LiskovSubstitution {
         // kan inte flyga
         Ostrich ostrich = new Ostrich();
         ostrich.greet();
-        ostrich.fly();
+       // ostrich.fly();
 
         // kan flyga
         Sparrow sparrow = new Sparrow();
-        sparrow.greet();
+       // sparrow.greet();
         sparrow.fly();
     }
 }
@@ -22,12 +22,14 @@ class Bird {
     public void greet() {
         System.out.println("greeting...");
     }
+}
 
+class FlyingBird {
     public void fly() {
         System.out.println("flying...");
     }
 }
 
-class Sparrow extends Bird {}
+class Sparrow extends FlyingBird {}
 
 class Ostrich extends Bird {}
